@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/atlas-mark.svg" alt="ATLAS" width="180" />
+  <img src="assets/atlas-nav-icon.svg" alt="ATLAS" width="180" />
 </p>
 
 # ATLAS
