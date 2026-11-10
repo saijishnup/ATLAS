@@ -1,0 +1,11 @@
+{
+  "note": "Author judgement (F35). Labels were revised after seeing scorer output, so agreement is a regression guard, not independent proof. top1 = accepted #1 models; shortlist = models the author finds defensible in the top 3.",
+  "samples": {
+    "adas-aeb":           {"top1": ["v-model"],         "shortlist": ["v-model", "mbse-v", "agile-v"]},
+    "bms-firmware":       {"top1": ["v-model"],         "shortlist": ["v-model", "mbse-v", "formal-methods", "waterfall"]},
+    "ota-updater":        {"top1": ["devsecops"],       "shortlist": ["devsecops", "agile-v", "water-scrum-fall", "mbse-v"]},
+    "telematics-gateway": {"top1": ["devsecops"],       "shortlist": ["devsecops", "agile-v", "water-scrum-fall"]},
+    "infotainment-app":   {"top1": ["agile", "scrum"],  "shortlist": ["agile", "scrum", "kanban", "devops"]},
+    "diagnostics-tool":   {"top1": ["agile", "waterfall"], "shortlist": ["waterfall", "agile", "kanban"]}
+  }
+}

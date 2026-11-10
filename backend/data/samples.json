@@ -1,0 +1,20 @@
+[
+  {"id": "adas-aeb", "name": "Automatic emergency braking", "project_type": "adas",
+   "description": "Forward collision warning and automatic emergency braking function on a front radar and camera fusion ECU. It must detect vehicles and pedestrians and apply the brakes when the driver does not react. It talks to the braking ECU over CAN and must meet functional safety and type approval rules. The team mixes in-house engineers and a sensor supplier.",
+   "traits": {"safety_level": "high", "requirement_stability": "medium", "hardware_dependency": "high", "regulatory_audit": "high", "ota_frequency": "low", "connectivity": "low", "team_size": "high", "timeline_pressure": "medium"}},
+  {"id": "infotainment-app", "name": "Infotainment media and navigation app", "project_type": "infotainment",
+   "description": "Infotainment head unit app that plays media, shows navigation and pairs with phones over Bluetooth. Features change often based on feedback from pilot vehicles. Updates ship monthly through an app store. Eight developers build it with a product owner on site.",
+   "traits": {"safety_level": "low", "requirement_stability": "low", "hardware_dependency": "medium", "regulatory_audit": "low", "ota_frequency": "high", "connectivity": "medium", "team_size": "medium", "timeline_pressure": "medium"}},
+  {"id": "ota-updater", "name": "OTA update client for telematics unit", "project_type": "ota",
+   "description": "OTA update client that downloads signed software packages for ECUs, verifies them, installs them in sequence and rolls back on failure. It talks to a cloud update server and to ECUs over UDS. It must follow vehicle software update and cybersecurity rules. Releases are planned every month.",
+   "traits": {"safety_level": "medium", "requirement_stability": "medium", "hardware_dependency": "medium", "regulatory_audit": "high", "ota_frequency": "high", "connectivity": "high", "team_size": "low", "timeline_pressure": "medium"}},
+  {"id": "bms-firmware", "name": "Battery management firmware", "project_type": "bms",
+   "description": "Firmware for a battery management system that measures cell voltage and temperature, estimates state of charge and opens contactors on faults. It runs on a dedicated microcontroller and talks to the vehicle over CAN. A fault can cause fire, so safety analysis and hardware testing are required. Requirements are mostly fixed by the cell supplier and the vehicle maker.",
+   "traits": {"safety_level": "high", "requirement_stability": "high", "hardware_dependency": "high", "regulatory_audit": "high", "ota_frequency": "low", "connectivity": "low", "team_size": "medium", "timeline_pressure": "medium"}},
+  {"id": "telematics-gateway", "name": "Telematics gateway software", "project_type": "telematics",
+   "description": "Telematics gateway that connects the vehicle to a cloud service over cellular, uploads trip data and receives remote commands such as lock and unlock. It forwards messages between the cellular modem and the vehicle network. Remote access makes security the main concern. Five engineers release every two weeks.",
+   "traits": {"safety_level": "medium", "requirement_stability": "medium", "hardware_dependency": "medium", "regulatory_audit": "medium", "ota_frequency": "high", "connectivity": "high", "team_size": "low", "timeline_pressure": "high"}},
+  {"id": "diagnostics-tool", "name": "Workshop diagnostics tool", "project_type": "diagnostics",
+   "description": "Workshop diagnostics tool that reads fault codes, shows live data and runs service routines on vehicles over the OBD port. Requirements are stable and defined by the service department. It runs on a laptop and connects to the vehicle only through the diagnostic cable. Three developers build it over six months.",
+   "traits": {"safety_level": "low", "requirement_stability": "high", "hardware_dependency": "medium", "regulatory_audit": "low", "ota_frequency": "low", "connectivity": "medium", "team_size": "low", "timeline_pressure": "low"}}
+]

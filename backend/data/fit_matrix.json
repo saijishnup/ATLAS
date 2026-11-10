@@ -1,0 +1,39 @@
+{
+  "note": "Fit values are expert judgement written for this project, not an empirical benchmark. Weights and values are editable. Each model row lists 10 [low, medium, high] fits in factor order. Big Bang and RAD rarely rank high by design.",
+  "factors": [
+    {"id": "safety_criticality", "label": "Safety criticality", "weight": 3, "levels": {"low": "QM, no safety function", "medium": "ASIL A-B", "high": "ASIL C-D"}},
+    {"id": "requirement_stability", "label": "Requirement stability", "weight": 2, "levels": {"low": "Frequent or large changes expected", "medium": "Some change expected", "high": "Frozen or rarely changing"}},
+    {"id": "hardware_dependency", "label": "Hardware dependency", "weight": 1.5, "levels": {"low": "Software only", "medium": "Some hardware coupling", "high": "Tightly bound to ECU or hardware"}},
+    {"id": "regulatory_audit", "label": "Regulatory audit burden", "weight": 2.5, "levels": {"low": "Internal review only", "medium": "Customer or supplier audits", "high": "Type approval or formal assessment"}},
+    {"id": "ota_frequency", "label": "OTA update frequency", "weight": 1.5, "levels": {"low": "Rare or none", "medium": "A few times a year", "high": "Monthly or faster"}},
+    {"id": "cyber_exposure", "label": "Cyber exposure", "weight": 2, "levels": {"low": "Offline or isolated", "medium": "Limited connectivity, e.g. diagnostic port", "high": "Internet-connected"}},
+    {"id": "team_size", "label": "Team size", "weight": 1, "levels": {"low": "1-5 people", "medium": "6-20 people", "high": "More than 20 people"}},
+    {"id": "timeline_pressure", "label": "Timeline pressure", "weight": 1, "levels": {"low": "Flexible deadline", "medium": "Normal", "high": "Tight fixed deadline"}},
+    {"id": "stakeholder_availability", "label": "Stakeholder availability", "weight": 1, "levels": {"low": "Hard to reach", "medium": "Reachable weekly", "high": "Available daily"}},
+    {"id": "supplier_complexity", "label": "Supplier / integration complexity", "weight": 1, "levels": {"low": "In-house only", "medium": "A few suppliers", "high": "Many suppliers, complex integration"}}
+  ],
+  "models": {
+    "waterfall": {"name": "Waterfall", "family": "plan", "card": "sdlc-waterfall", "fit": [[0.7,0.6,0.5],[0.1,0.5,1],[0.5,0.8,0.9],[0.6,0.7,0.9],[0.8,0.4,0.1],[0.6,0.5,0.4],[0.6,0.7,0.7],[0.8,0.5,0.2],[0.4,0.6,0.7],[0.6,0.8,0.9]]},
+    "v-model": {"name": "V-Model", "family": "plan", "card": "sdlc-v-model", "fit": [[0.4,0.8,1],[0.2,0.6,0.9],[0.5,0.8,1],[0.4,0.8,1],[0.7,0.4,0.15],[0.6,0.6,0.6],[0.5,0.7,0.9],[0.8,0.5,0.2],[0.5,0.6,0.7],[0.6,0.8,1]]},
+    "big-bang": {"name": "Big Bang", "family": "adhoc", "card": "sdlc-big-bang", "fit": [[0.3,0,0],[0.4,0.2,0.1],[0.5,0.1,0],[0.3,0,0],[0.4,0.3,0.3],[0.3,0.1,0],[0.4,0.2,0],[0.4,0.3,0.3],[0.3,0.3,0.3],[0.4,0.1,0]]},
+    "formal-methods": {"name": "Formal methods / Cleanroom", "family": "plan", "card": "sdlc-formal-methods", "fit": [[0.1,0.5,0.9],[0,0.5,1],[0.4,0.6,0.8],[0.3,0.7,1],[0.6,0.3,0.1],[0.5,0.6,0.7],[0.3,0.6,0.7],[0.8,0.4,0.1],[0.4,0.5,0.6],[0.4,0.6,0.7]]},
+    "incremental": {"name": "Incremental", "family": "agile", "card": "sdlc-incremental", "fit": [[0.8,0.6,0.4],[0.5,0.8,0.8],[0.6,0.7,0.6],[0.6,0.6,0.5],[0.5,0.7,0.6],[0.6,0.6,0.5],[0.6,0.8,0.7],[0.6,0.8,0.8],[0.5,0.7,0.7],[0.5,0.7,0.7]]},
+    "iterative": {"name": "Iterative", "family": "agile", "card": "sdlc-iterative", "fit": [[0.9,0.6,0.4],[0.9,0.8,0.4],[0.8,0.6,0.4],[0.7,0.5,0.4],[0.5,0.7,0.6],[0.7,0.6,0.5],[0.8,0.7,0.5],[0.9,0.7,0.5],[0.3,0.7,0.9],[0.7,0.6,0.4]]},
+    "spiral": {"name": "Spiral", "family": "plan", "card": "sdlc-spiral", "fit": [[0.5,0.8,0.8],[0.9,0.7,0.3],[0.6,0.8,0.8],[0.4,0.6,0.7],[0.5,0.6,0.5],[0.5,0.7,0.8],[0.4,0.7,0.6],[0.8,0.5,0.2],[0.4,0.7,0.9],[0.4,0.7,0.8]]},
+    "rad": {"name": "Rapid Application Development", "family": "agile", "card": "sdlc-rad", "fit": [[0.8,0.3,0],[0.9,0.6,0.2],[0.8,0.3,0.1],[0.7,0.3,0],[0.5,0.6,0.6],[0.7,0.5,0.2],[0.9,0.5,0.1],[0.4,0.8,1],[0.1,0.5,1],[0.8,0.4,0.1]]},
+    "prototyping": {"name": "Prototyping", "family": "agile", "card": "sdlc-prototyping", "fit": [[0.9,0.3,0],[1,0.5,0.1],[0.9,0.4,0.2],[0.9,0.4,0.1],[0.8,0.5,0.3],[0.8,0.5,0.3],[0.9,0.6,0.3],[0.8,0.7,0.8],[0.1,0.5,1],[0.8,0.5,0.3]]},
+    "unified-process": {"name": "Unified Process", "family": "plan", "card": "sdlc-unified-process", "fit": [[0.5,0.7,0.7],[0.5,0.8,0.7],[0.5,0.7,0.7],[0.5,0.8,0.8],[0.4,0.6,0.5],[0.6,0.7,0.7],[0.4,0.8,0.9],[0.5,0.7,0.5],[0.5,0.7,0.8],[0.5,0.8,0.8]]},
+    "agile": {"name": "Agile", "family": "agile", "card": "sdlc-agile", "fit": [[1,0.5,0.2],[1,0.7,0.3],[0.9,0.5,0.2],[0.9,0.5,0.2],[0.6,0.9,1],[0.8,0.6,0.4],[1,0.8,0.4],[0.6,0.8,0.9],[0.2,0.7,1],[0.8,0.5,0.3]]},
+    "scrum": {"name": "Scrum", "family": "agile", "card": "sdlc-scrum", "fit": [[0.9,0.5,0.2],[1,0.7,0.3],[0.8,0.5,0.2],[0.9,0.5,0.2],[0.6,0.9,0.9],[0.8,0.6,0.4],[1,0.9,0.4],[0.6,0.8,0.9],[0.1,0.8,1],[0.8,0.6,0.3]]},
+    "kanban": {"name": "Kanban", "family": "agile", "card": "sdlc-kanban", "fit": [[0.9,0.5,0.2],[1,0.8,0.4],[0.8,0.6,0.3],[0.8,0.5,0.2],[0.7,0.9,0.9],[0.8,0.6,0.4],[0.8,0.8,0.5],[0.7,0.8,0.8],[0.5,0.7,0.8],[0.7,0.6,0.4]]},
+    "xp": {"name": "Extreme Programming", "family": "agile", "card": "sdlc-xp", "fit": [[0.9,0.6,0.2],[1,0.8,0.2],[0.7,0.4,0.1],[0.8,0.5,0.1],[0.6,0.8,0.9],[0.7,0.7,0.4],[1,0.5,0],[0.5,0.7,0.8],[0.1,0.6,1],[0.7,0.4,0.2]]},
+    "lean": {"name": "Lean", "family": "agile", "card": "sdlc-lean", "fit": [[0.8,0.5,0.3],[0.9,0.8,0.5],[0.7,0.6,0.4],[0.7,0.5,0.3],[0.6,0.8,0.8],[0.7,0.6,0.5],[0.8,0.8,0.6],[0.5,0.7,0.8],[0.4,0.7,0.8],[0.7,0.7,0.5]]},
+    "safe": {"name": "SAFe", "family": "agile", "card": "sdlc-safe", "fit": [[0.4,0.7,0.7],[0.6,0.8,0.6],[0.5,0.7,0.7],[0.5,0.7,0.7],[0.5,0.7,0.7],[0.5,0.6,0.6],[0,0.5,1],[0.4,0.6,0.7],[0.4,0.7,0.9],[0.4,0.8,0.9]]},
+    "devops": {"name": "DevOps", "family": "agile", "card": "sdlc-devops", "fit": [[0.9,0.5,0.2],[0.9,0.7,0.4],[0.8,0.4,0.1],[0.8,0.5,0.3],[0.3,0.8,1],[0.6,0.7,0.6],[0.9,0.8,0.6],[0.6,0.8,0.9],[0.4,0.7,0.9],[0.6,0.5,0.3]]},
+    "devsecops": {"name": "DevSecOps", "family": "agile", "card": "sdlc-devsecops", "fit": [[0.7,0.7,0.5],[0.8,0.7,0.4],[0.6,0.5,0.3],[0.6,0.8,0.8],[0.2,0.8,1],[0.2,0.8,1],[0.7,0.8,0.7],[0.6,0.7,0.8],[0.4,0.7,0.9],[0.6,0.7,0.5]]},
+    "continuous-delivery": {"name": "Continuous Delivery", "family": "agile", "card": "sdlc-continuous-delivery", "fit": [[0.8,0.4,0.1],[0.8,0.8,0.5],[0.7,0.4,0.1],[0.7,0.6,0.3],[0.2,0.8,1],[0.5,0.7,0.7],[0.8,0.8,0.6],[0.6,0.8,0.9],[0.4,0.7,0.9],[0.6,0.5,0.3]]},
+    "agile-v": {"name": "Agile-V hybrid", "family": "hybrid", "card": "sdlc-agile-v", "fit": [[0.3,0.7,1],[0.5,0.8,0.6],[0.5,0.7,0.9],[0.4,0.7,1],[0.4,0.6,0.6],[0.4,0.6,0.8],[0.5,0.7,0.8],[0.4,0.6,0.6],[0.4,0.7,0.8],[0.4,0.6,0.9]]},
+    "water-scrum-fall": {"name": "Water-Scrum-Fall", "family": "hybrid", "card": "sdlc-water-scrum-fall", "fit": [[0.6,0.7,0.6],[0.4,0.8,0.8],[0.5,0.8,0.8],[0.5,0.8,0.8],[0.3,0.6,0.5],[0.5,0.6,0.5],[0.5,0.8,0.8],[0.5,0.7,0.6],[0.4,0.7,0.8],[0.6,0.8,0.9]]},
+    "mbse-v": {"name": "MBSE-V", "family": "plan", "card": "sdlc-mbse-v", "fit": [[0.2,0.8,1],[0.2,0.7,0.9],[0.5,0.85,1],[0.4,0.8,1],[0.45,0.45,0.25],[0.45,0.65,0.75],[0.3,0.6,0.9],[0.65,0.45,0.2],[0.4,0.6,0.8],[0.5,0.85,1]]}
+  }
+}
