@@ -1,6 +1,19 @@
+<p align="center">
+  <img src="assets/atlas-mark.svg" alt="ATLAS" width="180" />
+</p>
+
 # ATLAS
 
-**Automotive Technical Lifecycle Analysis System**
+<p align="center"><em>Automotive Technical Lifecycle Analysis System</em></p>
+
+<p align="center">
+  <a href="#run-locally"><img src="https://img.shields.io/badge/python-3.11%2B-152935?style=flat-square&labelColor=f8fafc" alt="Python 3.11+" /></a>
+  <a href="#run-locally"><img src="https://img.shields.io/badge/react-vite-698ea2?style=flat-square&labelColor=f8fafc" alt="React and Vite" /></a>
+  <a href="#features"><img src="https://img.shields.io/badge/knowledge%20base-61%20cards-25062b?style=flat-square&labelColor=f8fafc" alt="61 knowledge cards" /></a>
+  <a href="https://github.com/saijishnup/ATLAS/actions"><img src="https://img.shields.io/badge/status-demo-2f9e5b?style=flat-square&labelColor=f8fafc" alt="Demo status" /></a>
+</p>
+
+---
 
 ATLAS is an agentic requirements-analysis workspace for automotive software
 projects. It gathers clarification answers, drafts traceable requirements

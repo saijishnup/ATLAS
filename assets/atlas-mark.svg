@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">ATLAS mark</title>
+  <desc id="desc">A plum compass mark representing automotive lifecycle analysis.</desc>
+  <rect width="256" height="256" rx="56" fill="#25062b"/>
+  <path d="M128 38 181 188l-53-27-53 27L128 38Z" fill="#f8fafc"/>
+  <path d="m128 79 19 54-19-10-19 10 19-54Z" fill="#698ea2"/>
+  <circle cx="128" cy="128" r="89" fill="none" stroke="#698ea2" stroke-width="8"/>
+  <path d="M128 18v20M128 218v20M18 128h20M218 128h20" stroke="#698ea2" stroke-width="8" stroke-linecap="round"/>
+</svg>
